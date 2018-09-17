@@ -32,6 +32,16 @@ class NotesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        switch segue.identifier {
+        case Segue.AddNote:
+            guard let destination = segue.destination as? AddNoteViewController else { return }
+            
+            // Configure Destination
+            destination.managedObjectContext = coreDataManager.managedObjectContext
+        default:
+            break
+        }
+        
     }
     
 
