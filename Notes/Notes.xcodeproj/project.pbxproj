@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2288D64214FF95500D13883 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2288D63214FF95500D13883 /* NoteViewController.swift */; };
 		A263D993214F7F4800FA37E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D992214F7F4800FA37E9 /* AppDelegate.swift */; };
 		A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D994214F7F4800FA37E9 /* NotesViewController.swift */; };
 		A263D998214F7F4800FA37E9 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A263D996214F7F4800FA37E9 /* Notes.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2288D63214FF95500D13883 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		A263D98F214F7F4800FA37E9 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A263D992214F7F4800FA37E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A263D994214F7F4800FA37E9 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2288D62214FF92A00D13883 /* Note View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2288D63214FF95500D13883 /* NoteViewController.swift */,
+			);
+			path = "Note View Controller";
+			sourceTree = "<group>";
+		};
 		A263D986214F7F4800FA37E9 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		A263D9BE214FCB3200FA37E9 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				A2288D62214FF92A00D13883 /* Note View Controller */,
 				A263D9B1214FA03C00FA37E9 /* Notes View Controller */,
 				A263D9B2214FA05000FA37E9 /* Add Note View Controller */,
 			);
@@ -261,6 +272,7 @@
 				A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */,
 				A263D9B7214FA4F700FA37E9 /* UIViewController.swift in Sources */,
 				A263D9BD214FC7C400FA37E9 /* Note.swift in Sources */,
+				A2288D64214FF95500D13883 /* NoteViewController.swift in Sources */,
 				A263D993214F7F4800FA37E9 /* AppDelegate.swift in Sources */,
 				A263D9B4214FA09800FA37E9 /* AddNoteViewController.swift in Sources */,
 				A263D9BA214FC0E400FA37E9 /* NoteTableViewCell.swift in Sources */,

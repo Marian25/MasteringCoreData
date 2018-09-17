@@ -73,6 +73,7 @@
                                                     <outlet property="contentsLabel" destination="I5b-Ql-TgO" id="ILC-vg-Bcd"/>
                                                     <outlet property="titleLabel" destination="tvN-qs-AT5" id="hCS-aA-DPy"/>
                                                     <outlet property="updatedAtLabel" destination="GRU-Bk-9tR" id="PgJ-gJ-a4U"/>
+                                                    <segue destination="2hR-PL-BCy" kind="show" identifier="Note" id="FA2-W9-UCY"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -167,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gqd-uK-Syn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="118"/>
+            <point key="canvasLocation" x="1926" y="-72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o6u-2a-sLH">
@@ -186,6 +187,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOW-n8-KUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="284" y="118"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="QsV-XZ-NrT">
+            <objects>
+                <viewController id="2hR-PL-BCy" customClass="NoteViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y9t-xU-USm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIe-8Z-Db1">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-8S-MYU">
+                                <rect key="frame" x="20" y="122" width="335" height="537"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eIe-8Z-Db1" firstAttribute="top" secondItem="ZnR-75-sWe" secondAttribute="top" constant="20" id="0hW-pe-aWO"/>
+                            <constraint firstAttribute="trailing" secondItem="h5X-8S-MYU" secondAttribute="trailing" constant="20" id="AcC-4m-As2"/>
+                            <constraint firstItem="eIe-8Z-Db1" firstAttribute="leading" secondItem="ZnR-75-sWe" secondAttribute="leading" constant="20" id="IPG-Q3-exc"/>
+                            <constraint firstItem="h5X-8S-MYU" firstAttribute="leading" secondItem="y9t-xU-USm" secondAttribute="leading" constant="20" id="Kah-Wf-xx5"/>
+                            <constraint firstItem="h5X-8S-MYU" firstAttribute="top" secondItem="eIe-8Z-Db1" secondAttribute="bottom" constant="8" id="alY-5X-M8U"/>
+                            <constraint firstItem="ZnR-75-sWe" firstAttribute="trailing" secondItem="eIe-8Z-Db1" secondAttribute="trailing" constant="20" id="fVP-Y4-hOS"/>
+                            <constraint firstItem="ZnR-75-sWe" firstAttribute="bottom" secondItem="h5X-8S-MYU" secondAttribute="bottom" constant="8" id="spf-gE-yY8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZnR-75-sWe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FR3-AG-pZ3"/>
+                    <connections>
+                        <outlet property="contentsTextView" destination="h5X-8S-MYU" id="pat-09-9td"/>
+                        <outlet property="titleTextField" destination="eIe-8Z-Db1" id="wbp-5Q-YbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlO-Kj-BL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="647"/>
         </scene>
     </scenes>
 </document>

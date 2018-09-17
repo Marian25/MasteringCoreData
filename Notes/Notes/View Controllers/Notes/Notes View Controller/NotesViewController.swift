@@ -15,6 +15,7 @@ class NotesViewController: UIViewController {
     
     private enum Segue {
         
+        static let Note = "Note"
         static let AddNote = "AddNote"
         
     }
