@@ -142,7 +142,50 @@ class NotesViewController: UIViewController, NSFetchedResultsControllerDelegate 
             print("\(error), \(error.localizedDescription)")
         }
     }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+        
+        updateView()
+    }
 
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) as? NoteTableViewCell {
+                configure(cell, at: indexPath)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+        }
+    }
+    
+    private func configure(_ cell: NoteTableViewCell, at indexPath: IndexPath) {
+        // Fetch Note
+        let note = fetchedResultsController.object(at: indexPath)
+        
+        // Configure Cell
+        cell.titleLabel.text = note.title
+        cell.contentsLabel.text = note.contents
+        cell.updatedAtLabel.text = updatedAtDateFormatter.string(from: note.updatedAtAsDate)
+    }
 }
 
 extension NotesViewController: UITableViewDataSource {
@@ -163,13 +206,8 @@ extension NotesViewController: UITableViewDataSource {
             fatalError("Unexpected Index Path")
         }
         
-        // Fetch Note
-        let note = fetchedResultsController.object(at: indexPath)
-        
         // Configure Cell
-        cell.titleLabel.text = note.title
-        cell.contentsLabel.text = note.contents
-        cell.updatedAtLabel.text = updatedAtDateFormatter.string(from: note.updatedAtAsDate)
+        configure(cell, at: indexPath)
         
         return cell
     }
