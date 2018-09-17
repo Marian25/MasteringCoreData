@@ -25,12 +25,12 @@ class ViewController: UIViewController {
             print(entityDescription.properties)
 
             // Initialize Managed Object
-            let note = NSManagedObject(entity: entityDescription, insertInto: coreDataManager.managedObjectContext)
+            let note = Note(context: coreDataManager.managedObjectContext)
             
             // Configure Managed Object
-            note.setValue("My First Note", forKey: "title")
-            note.setValue(NSDate(), forKey: "createdAt")
-            note.setValue(NSDate(), forKey: "updatedAt")
+            note.title = "My First Note"
+            note.createdAt = Date()
+            note.updatedAt = Date()
             
             print(note)
             
