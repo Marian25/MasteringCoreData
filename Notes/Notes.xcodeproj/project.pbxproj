@@ -17,6 +17,7 @@
 		A263D9B4214FA09800FA37E9 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9B3214FA09800FA37E9 /* AddNoteViewController.swift */; };
 		A263D9B7214FA4F700FA37E9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9B6214FA4F700FA37E9 /* UIViewController.swift */; };
 		A263D9BA214FC0E400FA37E9 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9B9214FC0E400FA37E9 /* NoteTableViewCell.swift */; };
+		A263D9BD214FC7C400FA37E9 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9BC214FC7C400FA37E9 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A263D9B3214FA09800FA37E9 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		A263D9B6214FA4F700FA37E9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A263D9B9214FC0E400FA37E9 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		A263D9BC214FC7C400FA37E9 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,7 @@
 		A263D9A5214F7F8800FA37E9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A263D9B1214FA03C00FA37E9 /* Notes View Controller */,
-				A263D9B2214FA05000FA37E9 /* Add Note View Controller */,
+				A263D9BE214FCB3200FA37E9 /* Notes */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -129,6 +130,7 @@
 		A263D9AD214F863800FA37E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				A263D9BB214FC7B200FA37E9 /* Extensions */,
 				A263D9AE214F865600FA37E9 /* Notes.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -165,6 +167,23 @@
 				A263D9B9214FC0E400FA37E9 /* NoteTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		A263D9BB214FC7B200FA37E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A263D9BC214FC7C400FA37E9 /* Note.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A263D9BE214FCB3200FA37E9 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				A263D9B1214FA03C00FA37E9 /* Notes View Controller */,
+				A263D9B2214FA05000FA37E9 /* Add Note View Controller */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +260,7 @@
 				A263D9AC214F80A800FA37E9 /* CoreDataManager.swift in Sources */,
 				A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */,
 				A263D9B7214FA4F700FA37E9 /* UIViewController.swift in Sources */,
+				A263D9BD214FC7C400FA37E9 /* Note.swift in Sources */,
 				A263D993214F7F4800FA37E9 /* AppDelegate.swift in Sources */,
 				A263D9B4214FA09800FA37E9 /* AddNoteViewController.swift in Sources */,
 				A263D9BA214FC0E400FA37E9 /* NoteTableViewCell.swift in Sources */,

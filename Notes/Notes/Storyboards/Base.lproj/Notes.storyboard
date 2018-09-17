@@ -76,6 +76,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="CDv-bP-wPz"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="A1P-OB-drb"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
