@@ -46,7 +46,7 @@ class ColorViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         // Notify Delegate
-        delegate?.controller(self, didPick: colorView.backgroundColor ?? .white)
+        delegate?.controller(self, didPick: (colorView.backgroundColor ?? .white))
     }
     
     // MARK: - View Methods

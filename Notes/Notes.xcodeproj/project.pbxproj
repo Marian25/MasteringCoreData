@@ -26,6 +26,7 @@
 		A264074221513F7D008CC23B /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A264074021513F7D008CC23B /* Categories.storyboard */; };
 		A2766D2A2151424F004224E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2766D292151424F004224E9 /* UIColor.swift */; };
 		A2766D2D21515587004224E9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2766D2C21515587004224E9 /* ColorViewController.swift */; };
+		A2766D2F2151611E004224E9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2766D2E2151611E004224E9 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		A264074121513F7D008CC23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		A2766D292151424F004224E9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A2766D2C21515587004224E9 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		A2766D2E2151611E004224E9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A263D9BC214FC7C400FA37E9 /* Note.swift */,
+				A2766D2E2151611E004224E9 /* Category.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */,
 				A263D9B7214FA4F700FA37E9 /* UIViewController.swift in Sources */,
 				A263D9BD214FC7C400FA37E9 /* Note.swift in Sources */,
+				A2766D2F2151611E004224E9 /* Category.swift in Sources */,
 				A264073F21513370008CC23B /* AddCategoryViewController.swift in Sources */,
 				A2288D64214FF95500D13883 /* NoteViewController.swift in Sources */,
 				A263D993214F7F4800FA37E9 /* AppDelegate.swift in Sources */,

@@ -135,7 +135,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izz-Xe-MHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="5ZS-7Z-HqS">
                     <connections>
-                        <segue destination="jLM-qX-Ynp" kind="show" id="gZg-cA-LGr"/>
+                        <segue destination="jLM-qX-Ynp" kind="show" identifier="Color" id="gZg-cA-LGr"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
