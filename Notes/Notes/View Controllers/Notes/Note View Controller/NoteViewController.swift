@@ -10,8 +10,17 @@ import UIKit
 
 class NoteViewController: UIViewController {
 
+    // MARK: - Segues
+    
+    private enum Segue {
+        
+        static let Categories = "Categories"
+        
+    }
+    
     // MARK: - Properties
     
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     
@@ -40,10 +49,30 @@ class NoteViewController: UIViewController {
         note?.contents = contentsTextView.text
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case Segue.Categories:
+            guard let destination = segue.destination as? CategoriesViewController else { return }
+            
+            // Configure Destination
+            destination.managedObjectContext = note?.managedObjectContext
+        default:
+            break
+        }
+    }
+    
+    // MARK: - View Methods
+    
     private func setupView() {
         setupTitleTextField()
         setupContentsTextView()
     }
+    
+    // MARK: -
     
     private func setupTitleTextField() {
         // Configure Title Text Field
@@ -54,11 +83,4 @@ class NoteViewController: UIViewController {
         // Configure Contents Text View
         contentsTextView.text = note?.contents
     }
-   
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
 }
