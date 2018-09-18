@@ -25,6 +25,7 @@
 		A264073F21513370008CC23B /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A264073E21513370008CC23B /* AddCategoryViewController.swift */; };
 		A264074221513F7D008CC23B /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A264074021513F7D008CC23B /* Categories.storyboard */; };
 		A2766D2A2151424F004224E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2766D292151424F004224E9 /* UIColor.swift */; };
+		A2766D2D21515587004224E9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2766D2C21515587004224E9 /* ColorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A264073E21513370008CC23B /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		A264074121513F7D008CC23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		A2766D292151424F004224E9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		A2766D2C21515587004224E9 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				A26407372151331E008CC23B /* CategoryViewController.swift */,
+				A2766D2B21515568004224E9 /* Color View Controller */,
 			);
 			path = "Category View Controller";
 			sourceTree = "<group>";
@@ -253,6 +256,14 @@
 				A264073C2151335A008CC23B /* CategoryTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		A2766D2B21515568004224E9 /* Color View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2766D2C21515587004224E9 /* ColorViewController.swift */,
+			);
+			path = "Color View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				A263D9B4214FA09800FA37E9 /* AddNoteViewController.swift in Sources */,
 				A263D9BA214FC0E400FA37E9 /* NoteTableViewCell.swift in Sources */,
 				A263D9B0214F865600FA37E9 /* Notes.xcdatamodeld in Sources */,
+				A2766D2D21515587004224E9 /* ColorViewController.swift in Sources */,
 				A264073D2151335A008CC23B /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -95,31 +95,116 @@
                         <viewControllerLayoutGuide type="top" id="Ern-Be-BcE"/>
                         <viewControllerLayoutGuide type="bottom" id="vpV-qo-vIi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2qS-pe-xYV">
+                    <view key="view" contentMode="scaleToFill" id="oim-iu-dQh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70D-Cf-3hq">
-                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZ7-u5-rlX">
+                                <rect key="frame" x="58" y="40" width="297" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5j-cx-bH9">
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1fF-5l-OKf"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZAN-8S-c6d"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5ZS-7Z-HqS" appends="YES" id="fCG-BF-wpw"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="70D-Cf-3hq" firstAttribute="leading" secondItem="2qS-pe-xYV" secondAttribute="leading" constant="20" id="K8i-he-Cz5"/>
-                            <constraint firstItem="70D-Cf-3hq" firstAttribute="top" secondItem="Ern-Be-BcE" secondAttribute="bottom" constant="20" id="ZZx-CV-dqV"/>
-                            <constraint firstAttribute="trailing" secondItem="70D-Cf-3hq" secondAttribute="trailing" constant="20" id="xcf-Uo-27Z"/>
+                            <constraint firstItem="v5j-cx-bH9" firstAttribute="leading" secondItem="oim-iu-dQh" secondAttribute="leading" constant="20" id="6cj-Df-Kpb"/>
+                            <constraint firstItem="v5j-cx-bH9" firstAttribute="top" secondItem="Ern-Be-BcE" secondAttribute="bottom" constant="20" id="IPA-jJ-xed"/>
+                            <constraint firstItem="TZ7-u5-rlX" firstAttribute="leading" secondItem="v5j-cx-bH9" secondAttribute="trailing" constant="8" id="Kb7-0Y-yW2"/>
+                            <constraint firstItem="TZ7-u5-rlX" firstAttribute="top" secondItem="Ern-Be-BcE" secondAttribute="bottom" constant="20" id="MOW-mn-vlw"/>
+                            <constraint firstAttribute="trailing" secondItem="TZ7-u5-rlX" secondAttribute="trailing" constant="20" id="pwt-9f-1u2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameTextField" destination="70D-Cf-3hq" id="Xbw-uU-Fgb"/>
+                        <outlet property="colorView" destination="v5j-cx-bH9" id="1rk-b2-xhX"/>
+                        <outlet property="nameTextField" destination="TZ7-u5-rlX" id="5ea-oc-RVH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izz-Xe-MHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5ZS-7Z-HqS">
+                    <connections>
+                        <segue destination="jLM-qX-Ynp" kind="show" id="gZg-cA-LGr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1308" y="255"/>
+        </scene>
+        <!--Color View Controller-->
+        <scene sceneID="KdV-e2-XmI">
+            <objects>
+                <viewController id="jLM-qX-Ynp" customClass="ColorViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="svl-Eo-dpf"/>
+                        <viewControllerLayoutGuide type="bottom" id="dM6-WF-8FC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MRw-f5-6dX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-bd-M1q">
+                                <rect key="frame" x="20" y="154" width="335" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ogz-hX-RAk"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uR2-2j-yIE">
+                                <rect key="frame" x="18" y="28" width="339" height="31"/>
+                                <connections>
+                                    <action selector="colorDidChange:" destination="jLM-qX-Ynp" eventType="valueChanged" id="Ylp-ZT-urW"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VHP-I1-wru">
+                                <rect key="frame" x="18" y="66" width="339" height="31"/>
+                                <connections>
+                                    <action selector="colorDidChange:" destination="jLM-qX-Ynp" eventType="valueChanged" id="xXB-b1-bZ0"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Zg-au1">
+                                <rect key="frame" x="18" y="104" width="339" height="31"/>
+                                <connections>
+                                    <action selector="colorDidChange:" destination="jLM-qX-Ynp" eventType="valueChanged" id="xIi-33-WvL"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RYz-bd-M1q" firstAttribute="top" secondItem="H6n-Zg-au1" secondAttribute="bottom" constant="20" id="2Ve-ah-Gge"/>
+                            <constraint firstItem="uR2-2j-yIE" firstAttribute="leading" secondItem="MRw-f5-6dX" secondAttribute="leading" constant="20" id="4fr-3e-sfg"/>
+                            <constraint firstItem="RYz-bd-M1q" firstAttribute="leading" secondItem="MRw-f5-6dX" secondAttribute="leading" constant="20" id="7ZI-pv-o7N"/>
+                            <constraint firstItem="H6n-Zg-au1" firstAttribute="top" secondItem="VHP-I1-wru" secondAttribute="bottom" constant="8" id="9eR-Wi-epc"/>
+                            <constraint firstItem="H6n-Zg-au1" firstAttribute="leading" secondItem="MRw-f5-6dX" secondAttribute="leading" constant="20" id="XSI-3L-iLy"/>
+                            <constraint firstAttribute="trailing" secondItem="uR2-2j-yIE" secondAttribute="trailing" constant="20" id="bKG-ae-KL0"/>
+                            <constraint firstAttribute="trailing" secondItem="RYz-bd-M1q" secondAttribute="trailing" constant="20" id="dVR-Dn-bjc"/>
+                            <constraint firstAttribute="trailing" secondItem="H6n-Zg-au1" secondAttribute="trailing" constant="20" id="gOz-48-xj7"/>
+                            <constraint firstItem="uR2-2j-yIE" firstAttribute="top" secondItem="svl-Eo-dpf" secondAttribute="bottom" constant="8" id="iiW-yP-dlh"/>
+                            <constraint firstItem="VHP-I1-wru" firstAttribute="leading" secondItem="MRw-f5-6dX" secondAttribute="leading" constant="20" id="jjL-Xy-oH4"/>
+                            <constraint firstAttribute="trailing" secondItem="VHP-I1-wru" secondAttribute="trailing" constant="20" id="k5g-xm-TG3"/>
+                            <constraint firstItem="VHP-I1-wru" firstAttribute="top" secondItem="uR2-2j-yIE" secondAttribute="bottom" constant="8" id="p8n-tT-NLK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="H6n-Zg-au1" id="wZF-wP-Zig"/>
+                        <outlet property="colorView" destination="RYz-bd-M1q" id="TZ1-al-h6S"/>
+                        <outlet property="greenSlider" destination="VHP-I1-wru" id="wP4-YO-ZxV"/>
+                        <outlet property="redSlider" destination="uR2-2j-yIE" id="1BA-PS-hIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdW-D5-lY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="254"/>
         </scene>
         <!--Add Category View Controller-->
         <scene sceneID="QNc-0g-KrI">
