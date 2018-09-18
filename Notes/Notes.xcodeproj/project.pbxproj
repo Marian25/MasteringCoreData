@@ -24,6 +24,7 @@
 		A264073D2151335A008CC23B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A264073C2151335A008CC23B /* CategoryTableViewCell.swift */; };
 		A264073F21513370008CC23B /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A264073E21513370008CC23B /* AddCategoryViewController.swift */; };
 		A264074221513F7D008CC23B /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A264074021513F7D008CC23B /* Categories.storyboard */; };
+		A2766D2A2151424F004224E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2766D292151424F004224E9 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A264073C2151335A008CC23B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A264073E21513370008CC23B /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		A264074121513F7D008CC23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
+		A2766D292151424F004224E9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				A263D9B6214FA4F700FA37E9 /* UIViewController.swift */,
+				A2766D292151424F004224E9 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26407382151331E008CC23B /* CategoryViewController.swift in Sources */,
+				A2766D2A2151424F004224E9 /* UIColor.swift in Sources */,
 				A264073B2151333A008CC23B /* CategoriesViewController.swift in Sources */,
 				A263D9AC214F80A800FA37E9 /* CoreDataManager.swift in Sources */,
 				A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */,

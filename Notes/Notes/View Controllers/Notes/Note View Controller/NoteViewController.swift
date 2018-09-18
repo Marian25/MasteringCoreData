@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NoteViewController: UIViewController {
 
@@ -35,6 +36,8 @@ class NoteViewController: UIViewController {
         title = "Edit Note"
         
         setupView()
+        
+        setupNotificationHandling()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -59,10 +62,33 @@ class NoteViewController: UIViewController {
             guard let destination = segue.destination as? CategoriesViewController else { return }
             
             // Configure Destination
-            destination.managedObjectContext = note?.managedObjectContext
+            destination.note = note
         default:
             break
         }
+    }
+    
+    // MARK: - Helper Methods
+    
+    private func setupNotificationHandling() {
+        let notificationCenter  = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(managedObjectContextObjectsDidChange(_:)), name: Notification.Name.NSManagedObjectContextObjectsDidChange, object: note?.managedObjectContext)
+    }
+    
+    // MARK: - Notification Handling
+    
+    @objc private func managedObjectContextObjectsDidChange(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else { return }
+        
+        if (updates.filter { return $0 == note }).count > 0 {
+            updateCategoryLabel()
+        }
+    }
+    
+    private func updateCategoryLabel() {
+        // Configure Category Label
+        categoryLabel.text = note?.category?.name ?? "No Category"
     }
     
     // MARK: - View Methods
