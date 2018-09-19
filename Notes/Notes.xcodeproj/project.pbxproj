@@ -13,12 +13,12 @@
 		A23CE3A421524C3D0040F4A2 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23CE3A321524C3D0040F4A2 /* TagsViewController.swift */; };
 		A23CE3A621524C4F0040F4A2 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23CE3A521524C4F0040F4A2 /* TagTableViewCell.swift */; };
 		A23CE3A821524C5D0040F4A2 /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23CE3A721524C5D0040F4A2 /* AddTagViewController.swift */; };
+		A23CE3AB215276960040F4A2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23CE3AA215276960040F4A2 /* CoreDataManager.swift */; };
 		A263D993214F7F4800FA37E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D992214F7F4800FA37E9 /* AppDelegate.swift */; };
 		A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D994214F7F4800FA37E9 /* NotesViewController.swift */; };
 		A263D998214F7F4800FA37E9 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A263D996214F7F4800FA37E9 /* Notes.storyboard */; };
 		A263D99A214F7F4C00FA37E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A263D999214F7F4C00FA37E9 /* Assets.xcassets */; };
 		A263D99D214F7F4C00FA37E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A263D99B214F7F4C00FA37E9 /* LaunchScreen.storyboard */; };
-		A263D9AC214F80A800FA37E9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9AB214F80A800FA37E9 /* CoreDataManager.swift */; };
 		A263D9B0214F865600FA37E9 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A263D9AE214F865600FA37E9 /* Notes.xcdatamodeld */; };
 		A263D9B4214FA09800FA37E9 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9B3214FA09800FA37E9 /* AddNoteViewController.swift */; };
 		A263D9B7214FA4F700FA37E9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263D9B6214FA4F700FA37E9 /* UIViewController.swift */; };
@@ -42,6 +42,7 @@
 		A23CE3A321524C3D0040F4A2 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 		A23CE3A521524C4F0040F4A2 /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		A23CE3A721524C5D0040F4A2 /* AddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
+		A23CE3AA215276960040F4A2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A263D98F214F7F4800FA37E9 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A263D992214F7F4800FA37E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A263D994214F7F4800FA37E9 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		A263D999214F7F4C00FA37E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A263D99C214F7F4C00FA37E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A263D99E214F7F4C00FA37E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A263D9AB214F80A800FA37E9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A263D9AF214F865600FA37E9 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		A263D9B3214FA09800FA37E9 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		A263D9B6214FA4F700FA37E9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +127,14 @@
 			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
+		A23CE3A9215276790040F4A2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A23CE3AA215276960040F4A2 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		A263D986214F7F4800FA37E9 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +160,7 @@
 				A263D9A7214F7F9D00FA37E9 /* Storyboards */,
 				A263D9A8214F7FA900FA37E9 /* Resources */,
 				A263D9B5214FA0B900FA37E9 /* Extensions */,
-				A263D9AA214F807200FA37E9 /* Managers */,
+				A23CE3A9215276790040F4A2 /* Managers */,
 				A263D9A9214F7FB000FA37E9 /* Supporting Files */,
 			);
 			path = Notes;
@@ -201,14 +209,6 @@
 				A263D99E214F7F4C00FA37E9 /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A263D9AA214F807200FA37E9 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				A263D9AB214F80A800FA37E9 /* CoreDataManager.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		A263D9AD214F863800FA37E9 /* Core Data */ = {
@@ -403,7 +403,6 @@
 				A2766D2A2151424F004224E9 /* UIColor.swift in Sources */,
 				A264073B2151333A008CC23B /* CategoriesViewController.swift in Sources */,
 				A23CE3A121524C130040F4A2 /* TagViewController.swift in Sources */,
-				A263D9AC214F80A800FA37E9 /* CoreDataManager.swift in Sources */,
 				A263D995214F7F4800FA37E9 /* NotesViewController.swift in Sources */,
 				A263D9B7214FA4F700FA37E9 /* UIViewController.swift in Sources */,
 				A263D9BD214FC7C400FA37E9 /* Note.swift in Sources */,
@@ -417,6 +416,7 @@
 				A263D9B0214F865600FA37E9 /* Notes.xcdatamodeld in Sources */,
 				A2766D2D21515587004224E9 /* ColorViewController.swift in Sources */,
 				A264073D2151335A008CC23B /* CategoryTableViewCell.swift in Sources */,
+				A23CE3AB215276960040F4A2 /* CoreDataManager.swift in Sources */,
 				A23CE3A421524C3D0040F4A2 /* TagsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

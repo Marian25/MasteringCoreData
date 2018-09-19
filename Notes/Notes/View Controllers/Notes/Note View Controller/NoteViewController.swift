@@ -110,7 +110,8 @@ class NoteViewController: UIViewController {
     }
     
     private func updateTagsLabel() {
-        
+        // Configure Tags Label
+        tagsLabel.text = note?.alphabetizedTagsAsString ?? "No Tags"
     }
     
     private func setupTitleTextField() {
