@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		A2288D63214FF95500D13883 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		A23CE399215247080040F4A2 /* Notes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes 2.xcdatamodel"; sourceTree = "<group>"; };
 		A263D98F214F7F4800FA37E9 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A263D992214F7F4800FA37E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A263D994214F7F4800FA37E9 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -567,9 +568,10 @@
 		A263D9AE214F865600FA37E9 /* Notes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A23CE399215247080040F4A2 /* Notes 2.xcdatamodel */,
 				A263D9AF214F865600FA37E9 /* Notes.xcdatamodel */,
 			);
-			currentVersion = A263D9AF214F865600FA37E9 /* Notes.xcdatamodel */;
+			currentVersion = A23CE399215247080040F4A2 /* Notes 2.xcdatamodel */;
 			path = Notes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
