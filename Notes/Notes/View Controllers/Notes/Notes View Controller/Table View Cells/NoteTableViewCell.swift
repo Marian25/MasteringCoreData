@@ -16,6 +16,7 @@ class NoteTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
+    @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentsLabel: UILabel!
     @IBOutlet weak var updatedAtLabel: UILabel!

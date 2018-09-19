@@ -15,12 +15,14 @@ class NoteViewController: UIViewController {
     
     private enum Segue {
         
+        static let Tags = "Tags"
         static let Categories = "Categories"
         
     }
     
     // MARK: - Properties
     
+    @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
@@ -58,6 +60,11 @@ class NoteViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
+        case Segue.Tags:
+            guard let destination = segue.destination as? TagsViewController else { return }
+            
+            // Configure Destination
+            destination.note = note
         case Segue.Categories:
             guard let destination = segue.destination as? CategoriesViewController else { return }
             

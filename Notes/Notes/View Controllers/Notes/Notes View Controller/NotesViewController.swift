@@ -82,8 +82,9 @@ class NotesViewController: UIViewController, NSFetchedResultsControllerDelegate 
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
         
-        switch segue.identifier {
+        switch identifier {
         case Segue.AddNote:
             guard let destination = segue.destination as? AddNoteViewController else { return }
             
