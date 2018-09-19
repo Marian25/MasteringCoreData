@@ -50,7 +50,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="6Yd-CC-c7Z" id="V0r-YD-bad"/>
-                                            <segue destination="bZO-gk-1to" kind="show" identifier="Tag" id="iKe-It-dMI"/>
+                                            <segue destination="bZO-gk-1to" kind="show" identifier="Tag" trigger="accessoryAction" id="Gay-yP-GeV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -89,23 +89,29 @@ class NoteViewController: UIViewController {
         guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else { return }
         
         if (updates.filter { return $0 == note }).count > 0 {
+            updateTagsLabel()
             updateCategoryLabel()
         }
-    }
-    
-    private func updateCategoryLabel() {
-        // Configure Category Label
-        categoryLabel.text = note?.category?.name ?? "No Category"
     }
     
     // MARK: - View Methods
     
     private func setupView() {
+        setupTagsLabel()
+        setupCategoryLabel()
         setupTitleTextField()
         setupContentsTextView()
     }
     
     // MARK: -
+    
+    private func setupTagsLabel() {
+        updateTagsLabel()
+    }
+    
+    private func updateTagsLabel() {
+        
+    }
     
     private func setupTitleTextField() {
         // Configure Title Text Field
@@ -116,4 +122,14 @@ class NoteViewController: UIViewController {
         // Configure Contents Text View
         contentsTextView.text = note?.contents
     }
+    
+    private func setupCategoryLabel() {
+        updateCategoryLabel()
+    }
+    
+    private func updateCategoryLabel() {
+        // Configure Category Label
+        categoryLabel.text = note?.category?.name ?? "No Category"
+    }
+    
 }

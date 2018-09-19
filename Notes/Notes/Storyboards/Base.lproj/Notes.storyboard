@@ -218,51 +218,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQS-fk-XbG">
-                                <rect key="frame" x="20" y="128" width="335" height="30"/>
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMm-Bu-3gI">
-                                <rect key="frame" x="20" y="166" width="47.5" height="14"/>
+                                <rect key="frame" x="20" y="122" width="47.5" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-tk-3eo">
-                                <rect key="frame" x="20" y="184" width="297" height="18"/>
+                                <rect key="frame" x="20" y="140" width="297" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hSu-Ul-lBR">
-                                <rect key="frame" x="20" y="254" width="335" height="393"/>
+                                <rect key="frame" x="20" y="210" width="335" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvC-HY-AIt">
-                                <rect key="frame" x="325" y="166" width="30" height="36"/>
+                                <rect key="frame" x="325" y="122" width="30" height="36"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <segue destination="myr-5n-l8n" kind="show" identifier="Categories" id="Amd-Hr-EJT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-4c-t1i">
-                                <rect key="frame" x="20" y="210" width="24.5" height="14"/>
+                                <rect key="frame" x="20" y="166" width="24.5" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baW-ks-ecV">
-                                <rect key="frame" x="325" y="210" width="30" height="36"/>
+                                <rect key="frame" x="325" y="166" width="30" height="36"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <segue destination="516-XN-IMf" kind="show" identifier="Tags" id="Xx9-Al-izD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACq-S7-D75">
-                                <rect key="frame" x="20" y="228" width="297" height="18"/>
+                                <rect key="frame" x="20" y="184" width="297" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -285,7 +285,7 @@
                             <constraint firstItem="hSu-Ul-lBR" firstAttribute="top" secondItem="ACq-S7-D75" secondAttribute="bottom" constant="8" id="Pzq-sZ-lFW"/>
                             <constraint firstItem="yrv-4c-t1i" firstAttribute="leading" secondItem="kz5-ZL-77O" secondAttribute="leading" constant="20" id="Qff-sa-PGk"/>
                             <constraint firstItem="XvC-HY-AIt" firstAttribute="top" secondItem="QQS-fk-XbG" secondAttribute="bottom" constant="8" id="TUH-K1-s7r"/>
-                            <constraint firstItem="QQS-fk-XbG" firstAttribute="top" secondItem="PRV-YV-iD0" secondAttribute="top" constant="64" id="YQw-V5-Ol7"/>
+                            <constraint firstItem="QQS-fk-XbG" firstAttribute="top" secondItem="PRV-YV-iD0" secondAttribute="top" constant="20" id="YQw-V5-Ol7"/>
                             <constraint firstItem="hSu-Ul-lBR" firstAttribute="leading" secondItem="kz5-ZL-77O" secondAttribute="leading" constant="20" id="ZZ2-VF-HYo"/>
                             <constraint firstItem="baW-ks-ecV" firstAttribute="leading" secondItem="ACq-S7-D75" secondAttribute="trailing" constant="8" id="hHT-9e-vo3"/>
                             <constraint firstAttribute="trailing" secondItem="baW-ks-ecV" secondAttribute="trailing" constant="20" id="hrO-Rp-GEc"/>

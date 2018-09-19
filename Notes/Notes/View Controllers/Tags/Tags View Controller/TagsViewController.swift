@@ -205,6 +205,12 @@ extension TagsViewController: UITableViewDataSource {
         
         // Configure Cell
         cell.nameLabel.text = tag.name
+        
+        if let containsTag = note?.tags?.contains(tag), containsTag == true {
+            cell.nameLabel.textColor = .bitterSweet
+        } else {
+            cell.nameLabel.textColor = .black
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -223,6 +229,15 @@ extension TagsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Fetch Tag
+        let tag = fetchedResultsController.object(at: indexPath)
+        
+        if let containsTag = note?.tags?.contains(tag), containsTag == true {
+            note?.removeFromTags(tag)
+        } else {
+            note?.addToTags(tag)
+        }
     }
     
 }

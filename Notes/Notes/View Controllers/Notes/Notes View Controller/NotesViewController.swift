@@ -185,6 +185,7 @@ class NotesViewController: UIViewController, NSFetchedResultsControllerDelegate 
         // Configure Cell
         cell.titleLabel.text = note.title
         cell.contentsLabel.text = note.contents
+        cell.tagsLabel.text = note.alphabetizedTagsAsString ?? "No Tags"
         cell.updatedAtLabel.text = updatedAtDateFormatter.string(from: note.updatedAtAsDate)
         
         if let color = note.category?.color {
